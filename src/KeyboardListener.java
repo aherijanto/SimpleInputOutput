@@ -3,9 +3,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class KeyboardListener extends Frame implements KeyListener {
-
-    Label l;
-    TextArea area;
+    Label l; // variable declaration 'l' as Label
+    TextArea area; //variable declaration 'area' as TextArea
 
         // class constructor
     KeyboardListener() {
@@ -29,10 +28,10 @@ public class KeyboardListener extends Frame implements KeyListener {
         add(area);
 
         // setting size, layout and visibility of frame
+        setTitle("KeyBoard Listener");
         setSize (400, 400);
         setLayout (null);
         setVisible (true);
-
     }
 
     @Override
