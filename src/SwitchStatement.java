@@ -12,7 +12,6 @@ import java.awt.event.ActionListener;
 public class SwitchStatement {
     private static JFrame myFrameWindow;
 
-
     public static void main(String[] args) {
         myFrameWindow = new JFrame("Bilangan Genap dan Bilangan Ganjil");
         myFrameWindow.setSize(400,400);
@@ -43,12 +42,15 @@ public class SwitchStatement {
                 int myCheckingNumber = 0;
                 byte status;
                 String statusBilangan = null;
+                String myCheckString;
 
-
-                myCheckingNumber = Integer.parseInt(myValue.getText());
-                if(myCheckingNumber==0){
-                    status=2;
+                myCheckString = myValue.getText();
+                if(myCheckString.trim().isEmpty()){
+                    return;
+                }else {
+                    myCheckingNumber = Integer.parseInt(myValue.getText());
                 }
+
 
                 int myStatus = myCheckingNumber % 2;
 
@@ -61,15 +63,17 @@ public class SwitchStatement {
                 switch (status){
                     case 1 :
                         statusBilangan = "Bilangan Genap";
+                        myLabelResult.setForeground(Color.BLUE);
                         break;
                     case 0:
                         statusBilangan = "Bilangan Ganjil";
+                        myLabelResult.setForeground(Color.RED);
                         break;
                     default:
                         statusBilangan = "Silakan Input Value";
 
                 }
-                myLabelResult.setForeground(Color.RED);
+
                 myLabelResult.setText("Bilangan Tersebut adalah " + statusBilangan);
             }
         });
@@ -91,5 +95,4 @@ public class SwitchStatement {
         myFrameWindow.setVisible(true);
         myFrameWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-
 }
