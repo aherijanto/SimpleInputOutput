@@ -23,19 +23,31 @@ public class LoopingJFrame {
         myBtnExec.setText("Hit Me");
         myBtnExec.setBounds(255,60,100,30);
 
-        myBtnExec.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                int jumlahBtn = Integer.parseInt(myInputNumber.getText());
-                JButton btnNew[]= new JButton[jumlahBtn];
+        myBtnExec.addActionListener(e-> {
 
+                int jumlahBtn = Integer.parseInt(myInputNumber.getText());
+            JButton[] btnNew = new JButton[jumlahBtn];
+
+                int posX;
+                int posY = 110;
+                int count= 0;
                 for(int loop=0;loop<jumlahBtn;loop++) {
                     btnNew[loop] = new JButton();
-                    btnNew[loop].setBounds(50 + (loop * 155), 110, 150, 30);
+
+                    count++;
+                    if(count == 5){
+                        posX = 50;
+                        posY = posY+40;
+                        //count = 0;
+                    }else{
+                        posX = 50 + (loop*155);
+                    }
+
+                    btnNew[loop].setBounds(posX,posY, 150, 30);
                     btnNew[loop].setText("Button loop " + loop);
                     myFrameWindow.add(btnNew[loop]);
                     myFrameWindow.repaint();
-                }
+
             }
         });
         myFrameWindow.add(myLabel);
