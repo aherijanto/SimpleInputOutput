@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class ReviewCourse {
     public static void main(String[] args) {
-        // Tipe Data Primitive meliputi int, byte, float, double, char, boolean
+        // Tipe Data Primitive meliputi int, byte, float, double,
+        // char, boolean
 
         // Deklarasi Tipe Data Primitive pada Variabel
         int angkaInteger;
@@ -41,11 +42,13 @@ public class ReviewCourse {
         // Cetak isi Variable String namaSaya
         System.out.println("Nama Saya Adalah = " + namaSaya);
 
-        // Tipe Data Scanner digunakan untuk menunggu inputan dari USER
+        // Tipe Data Scanner digunakan untuk menunggu
+        // inputan dari USER
         inputScanner = new Scanner(System.in);
         System.out.print("Masukkan Angka = ");
 
-        // Input dari user ditampung dalam variable bertipe data Primitive
+        // Input dari user ditampung dalam variable
+        // bertipe data Primitive
         // Dalam kasus ini inputan user berupa angka ditampung dalam tipe data Integer
         int inputanAngka;
         inputanAngka = inputScanner.nextInt();
@@ -53,7 +56,8 @@ public class ReviewCourse {
         // Cetak isi dari variabel inputanAngka yang diperoleh dari USER
         System.out.println("Angka yang Anda Input Adalah = " + inputanAngka);
 
-        //Input dari user ditampung dalam variable bertipe data Non Primitive STRING
+        //Input dari user ditampung dalam variable
+        // bertipe data Non Primitive STRING
         Scanner inputString;
         inputString = new Scanner(System.in);
         System.out.println("Masukkan nama kamu = ");
